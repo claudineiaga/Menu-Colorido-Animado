@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.5s;
+    background: #04a2f7;
+}
+.navigation{
+    position: relative;
+    margin-top: -400px;
+    width: 350px;
+    height: 70px;
+    background: #fff;
+    border-radius: 35px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+}
+.navigation ul li{
+    list-style: none;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    font-weight: 500;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 77px;
+    text-align: center;
+    transition: 0.5s;
+}
+.navigation ul li.active a .icon{
+    color: #fff;
+}
+.navigation ul li a .icon ion-icon{
+    font-size: 20px;
+}
+.navigation ul li a .title{
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translate(-50%, 15%);
+    background: #fff;
+    width: auto;
+    padding: 5px 10px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.navigation ul li:hover a .title{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 50%);
+}
+.navigation ul li a .title::before{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    bottom: -8px;
+    left: 48%;
+    transform: rotate(45deg) translateX(-50%);
+    border-radius: 2px;
+}
+.navigation ul .indicator{
+    position: absolute;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    transition: 0.5s;
+}
+.navigation ul .indicator::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #333;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.navigation ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+    transform: translateX(calc(70px * 4));
+}
+.navigation ul li:nth-child(1).active ~ 
+.indicator::before{
+  background: #04a2f7;
+}
+.navigation ul li:nth-child(2).active ~ 
+.indicator::before{
+  background: #f40707;
+}
+.navigation ul li:nth-child(3).active ~ 
+.indicator::before{
+  background: #06eb24;
+}
+.navigation ul li:nth-child(4).active ~ 
+.indicator::before{
+  background: #760673;
+}
+.navigation ul li:nth-child(5).active ~ 
+.indicator::before{
+  background: #f9940f;
+}
